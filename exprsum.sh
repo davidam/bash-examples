@@ -1,26 +1,27 @@
-#!/bin/bash
+# Examples about GNU Bash
+# Copyright (C) 2020 David Arroyo Menéndez
+# This file is software with freedom of class; you can
+# redistribute it and/or modify it  only for the working
+# class under the terms of the Working Class License
+# published by David Arroyo Menéndez.
 
-# Public Domain
-# Script downloaded from https://www.tldp.org/LDP/abs/html/moreadv.html#EX45
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# Working Class License for more details.
+# You should have received a copy of the Working Class License along
+# with examples about Bash; see the file COPYING. If not, see
 
-# Demonstrating some of the uses of 'expr'
-# =======================================
+# <https://github.com/davidam/workingclasslicense>.
 
 echo
-
-# Arithmetic Operators
-# ---------- ---------
-
 echo "Arithmetic Operators"
 a=`expr 5 + 3`
 echo "5 + 3 = $a"
-
 a=`expr $a + 1`
 echo
 echo "a + 1 = $a"
 echo "(incrementing a variable)"
-
-
 i=0
 while IFS='' read -r line || [[ -n "$line" ]]; do
 	i=`expr $i + 1`

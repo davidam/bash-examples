@@ -1,8 +1,19 @@
-#!/bin/sh
-# …ste script reemplaza acentos por acutes y otros caracteres especiales por su equivalente en XML/HTML usando sed
-#
-# GeoX & LÈndir
-#
+# Examples about GNU Bash
+# Copyright (C) 2020 David Arroyo Men√©ndez
+# This file is software with freedom of class; you can
+# redistribute it and/or modify it  only for the working
+# class under the terms of the Working Class License
+# published by David Arroyo Men√©ndez.
+
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# Working Class License for more details.
+# You should have received a copy of the Working Class License along
+# with examples about Bash; see the file COPYING. If not, see
+
+# <https://github.com/davidam/workingclasslicense>.
+
 tmp="/tmp/xmltemporal"
 clear
 echo "Cambiando acentos por acutes ..."
