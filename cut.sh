@@ -33,3 +33,18 @@ cut -c 2,5,7 state.txt
 
 echo "cut -c 1-7 state.txt"
 cut -c 1-7 state.txt
+
+echo "cut --complement -d " " -f 1 state.txt"
+cut --complement -d " " -f 1 state.txt
+
+echo "cut --complement -c 5 state.txt"
+cut --complement -c 5 state.txt
+
+echo "cut -d " " -f 1,2 state.txt --output-delimiter='%'"
+cut -d " " -f 1,2 state.txt --output-delimiter='%'
+
+echo "cat state.txt | cut -d ' ' -f 1 | sort -r"
+cat state.txt | cut -d ' ' -f 1 | sort -r
+
+echo "cat state.txt | head -n 3 | cut -d ' ' -f 1 > list.txt"
+cat state.txt | head -n 3 | cut -d ' ' -f 1 > list.txt 
