@@ -15,7 +15,7 @@
 # <https://github.com/davidam/workingclasslicense>.
 
 tobeclonegitlab="guix-es"
-tobeclonegithub="bash-examples bashrefes c-examples davidam davidam.github.io haskell-examples java-examples js-examples gnuplot-examples marenostrum-examples php-mode ruby-examples sql-examples libremanuals.github.io orgguide-es GAPLEN python-examples damegender damenumpy dametowel damepandas damefunniest damcrawler certificaciones"
+tobeclonegithub="bash-examples bashrefes c-examples davidam davidam.github.io haskell-examples java-examples latex-examples js-examples gnuplot-examples marenostrum-examples php-mode ruby-examples sql-examples libremanuals.github.io orgguide-es GAPLEN python-examples damegender damenumpy dametowel damepandas damefunniest damegender-web damefaces damewebutils-web damelibraries-web damewebutils dameopencv damenltk damemysql damejson damealgorithms damescikit damescipy personal feminismlicense workingclasslicense"
 tobecloneorgmode="org-mode worg"
 tobeclonedrupal="orgmode drupal"
 gitdir="/home/davidam/git"
