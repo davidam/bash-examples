@@ -64,3 +64,5 @@ echo "Dado un fichero imprime cada línea excepto desde el inicio hasta el prime
 echo "cut --complement -d " " -f 1 state.txt"
 cut --complement -d " " -f 1 state.txt
 
+echo "Dado un fichero imprime las columnas 1 y 2 dividas por un espacio en blanco y separando las columnas con el caracter %"
+cut -d " " -f 1,2 state.txt --output-delimiter='%'
