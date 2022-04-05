@@ -230,6 +230,9 @@ SELECTIVE PRINTING OF CERTAIN LINES:
  sed -n '8,12p'               # method 1
  sed '8,12!d'                 # method 2
 
+ # print section of file from line 440 to the end
+ sed -n '440,$p' sed1line.txt 
+
  # print line number 52
  sed -n '52p'                 # method 1
  sed '52!d'                   # method 2
