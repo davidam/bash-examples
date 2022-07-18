@@ -14,27 +14,34 @@
 
 # <https://github.com/davidam/workingclasslicense>.
 
-tobeclonegitlab="guix-es"
-tobeclonegithub="bash-examples bashrefes c-examples davidam davidam.github.io haskell-examples java-examples latex-examples js-examples gnuplot-examples marenostrum-examples php-mode ruby-examples sql-examples libremanuals.github.io orgguide-es GAPLEN python-examples damegender damenumpy dametowel damepandas damefunniest damegender-web damefaces damewebutils-web damelibraries-web damewebutils dameopencv damenltk damemysql damejson damealgorithms damescikit damescipy personal feminismlicense workingclasslicense"
+tobeclonesavannah=""
+tobeclonegitlab="damegender"
+tobeclonegithub="angular-examples articles bash-examples bashrefes bootstrap-examples casperjs-examples c-examples damealgorithms damebasics damedb damefaces dameformats damefunniest damegender damegender-web damelibraries-web damenltk damenumpy dameopencv damescikit damescipy damescraping damepandas dametowel damewebutils damewebutils-web davidam davidam.github.io feminismlicense GAPLEN gnuplot-examples haskell-examples java-examples jest-examples jquery-examples js-examples latex-examples libremanuals.github.io marenostrum-examples nodejs-examples orgguide-es personal php-examples php-mode python-examples ruby-examples sql-examples workingclasslicense"
 tobecloneorgmode="org-mode worg"
 tobeclonedrupal="orgmode drupal"
-gitdir="/home/davidam/git"
-cd $gitdir
-for i in $tobeclonegitlab; do
-    if ! [ -d $i ]; then
-	git clone https://gitlab.com/davidam/$i
-    fi
-done
+repodir="/home/davidam/repos"
+cd $repodir
+
+
+########### GITHUB REPOSITORIES
+echo "github repositories"
+mkdir -p github
+cd github
 for i in $tobeclonegithub; do
     if ! [ -d $i ]; then
+	echo $i
 	git clone https://github.com/davidam/$i
     fi
 done
-for i in $tobecloneorgmode; do
-    if ! [ -d $i ]; then    
-	git clone https://code.orgmode.org/bzg/$i
-    fi
-done
+cd ..
+# for i in $tobecloneorgmode; do
+#     if ! [ -d $i ]; then    
+# 	git clone https://code.orgmode.org/bzg/$i
+#     fi
+# done
+
+########### DRUPAL REPOSITORIES
+echo "drupal repositories"
 if ! [ -d drupal7 ]; then
     mkdir drupal7
 fi
@@ -47,4 +54,29 @@ if ! [ -d drupal8 ]; then
 fi
 cd drupal8
 git clone --branch 8.x-1.x https://git.drupal.org/project/orgmode.git
+cd ..
+
+########## SAVANNAH REPOSITIORIES
+echo "savannah repositories"
+mkdir -p savannah
+cd savannah
+mkdir -p bzr
+cd bzr
+bzr branch bzr://bzr.savannah.nongnu.org/drupal-el
+bzr branch bzr://bzr.savannah.nongnu.org/gccintro-es
+cd ..
+mkdir -p git
+cd git
+git clone https://git.savannah.nongnu.org/git/elisp-es.git
+git clone https://git.savannah.nongnu.org/git/orgguide-es.git
+
+
+########### GITLAB REPOSITORIES
+echo "gitlab repositories"
+mkdir -p gitlab
+for i in $tobeclonegitlab; do
+    if ! [ -d $i ]; then
+	git clone https://gitlab.com/davidam/$i
+    fi
+done
 cd ..
